@@ -1,9 +1,9 @@
 package com.saymk.roadmap
 
-import com.saymk.roadmap.model.Obstacle
-import com.saymk.roadmap.model.Resource
-import com.saymk.roadmap.model.Wolf
-import com.saymk.roadmap.model.common.Coordinates
+import com.saymk.roadmap.model.entity.Obstacle
+import com.saymk.roadmap.model.entity.Resource
+import com.saymk.roadmap.model.entity.Wolf
+import com.saymk.roadmap.model.world.Coordinates
 
 fun main() {
     println(Wolf(Coordinates(1, 9)))

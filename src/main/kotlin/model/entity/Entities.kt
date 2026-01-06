@@ -1,13 +1,11 @@
-package com.saymk.roadmap.model
+package com.saymk.roadmap.model.entity
 
-import com.saymk.roadmap.config.CreatureConfig
 import com.saymk.roadmap.config.CreatureSettings
 import com.saymk.roadmap.config.ResourceConfig
 import com.saymk.roadmap.config.ResourceSettings
 import com.saymk.roadmap.config.Resources
-import com.saymk.roadmap.config.Species
 import com.saymk.roadmap.model.behaviour.Movable
-import com.saymk.roadmap.model.common.Coordinates
+import com.saymk.roadmap.model.world.Coordinates
 
 sealed class Entity {
     abstract val sprite: String
@@ -58,21 +56,8 @@ sealed class Creature : Entity(), Movable {
     abstract var hp: Double
     abstract val config: CreatureSettings
     abstract var isDead: Boolean
-}
-
-class Wolf(
-    override var coordinates: Coordinates
-) : Creature() {
-    override val sprite: String = "🐺"
-    override val config: CreatureSettings =
-        CreatureConfig.getConfig(Species.WOLF)
-    override var isDead: Boolean = false
-    override var hp: Double = config.maxHealth
 
     override fun move() {
-    }
 
-    override fun toString(): String {
-        return sprite
     }
 }

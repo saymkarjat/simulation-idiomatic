@@ -1,4 +1,4 @@
-package com.saymk.roadmap.model.common
+package com.saymk.roadmap.model.world
 
 data class Coordinates(
     val x: Int,

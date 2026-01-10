@@ -1,6 +1,7 @@
 package com.saymk.roadmap.model.world
 
 import com.saymk.roadmap.model.entity.Creature
+import com.saymk.roadmap.model.entity.CreatureStatus
 import com.saymk.roadmap.model.entity.Entity
 
 class WorldMap(
@@ -34,7 +35,7 @@ class WorldMap(
 
     fun removeDeadAnimals() {
         map.entries.removeIf { (_, value) ->
-            value is Creature && value.isDead
+            value is Creature && value.status == CreatureStatus.DEAD
         }
     }
 }

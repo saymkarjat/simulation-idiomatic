@@ -12,7 +12,6 @@ class Wolf(
     override val sprite: String = "🐺"
     override val config: CreatureSettings =
         CreatureConfig.getConfig(Species.WOLF)
-    override var isDead: Boolean = false
     override var hp: Double = config.maxHealth
 
     override fun toString(): String {

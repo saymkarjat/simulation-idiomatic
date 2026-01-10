@@ -55,9 +55,15 @@ sealed class Resource : Entity() {
 sealed class Creature : Entity(), Movable {
     abstract var hp: Double
     abstract val config: CreatureSettings
-    abstract var isDead: Boolean
+    var status: CreatureStatus = CreatureStatus.NEW
 
     override fun move() {
 
     }
+}
+
+enum class CreatureStatus {
+    NEW,
+    ALIVE,
+    DEAD
 }
